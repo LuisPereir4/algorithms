@@ -1,6 +1,6 @@
 # Binary Search Algorithm
 
-![Confused person reading a book](algorithms/pictures/binary-search.png)
+<img src="https://raw.githubusercontent.com/LuisPereir4/algorithms/main/pictures/binary-search.png" alt="Confused person reading a book" width="300"/>
 
 ## 🧠 Problem Definition
 Imagine you have a **sorted** collection of elements and want to find a specific one as quickly and efficiently as possible.  
