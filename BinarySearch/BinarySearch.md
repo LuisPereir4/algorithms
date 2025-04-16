@@ -1,4 +1,4 @@
-# Binary Search Algorithm
+# Binary Search Algorithm 🔍
 
 <img src="https://raw.githubusercontent.com/LuisPereir4/algorithms/main/pictures/binary-search.png" alt="Confused person reading a book" width="300"/>
 
@@ -6,36 +6,32 @@
 Imagine you have a **sorted** collection of elements and want to find a specific one as quickly and efficiently as possible.  
 How do you do that? The **Binary Search algorithm** is the perfect solution for this!
 
----
-
 ## 🔎 Example Use Case
-You have a phonebook and want to find a specific name, let's say **"Julia"**.
+Imagine you're looking for a specific name, like **"Julia"**, in a **printed phonebook**.
 
-Instead of checking every name one by one, the fastest way is:
+Instead of flipping through each page one by one, you open the book right in the **middle** and check if "Julia" comes **before** or **after** the current page.  
+You then repeat this process, always narrowing the search space in half, until you either find the name or confirm it’s not in the book.
 
-1. Open the phonebook in the **middle**.
-2. Check if **"Julia"** comes **before** or **after** the current page.
-3. If it's before, repeat the process on the **first half**.
-4. If it's after, repeat the process on the **second half**.
-5. Continue this until you find the name.
-6. If the name isn't found, return a value that indicates it was not found (e.g., `-1`).
-
----
+This is how binary search works — by **eliminating half of the remaining options at each step**.
 
 ## 💡 Solution Explanation
-Instead of going through each element one by one (like a linear search),  
-**Binary Search** cuts the collection in half at every step, making it **much faster**.
+Binary Search works by repeatedly dividing the **search interval** in half:
 
----
+1. Start with the entire sorted collection.
+2. Find the **middle element**.
+3. Compare the target value with the middle element:
+   - If they are equal → you found the item!
+   - If the target is **less than** the middle → repeat the search in the **left half**.
+   - If the target is **greater than** the middle → search the **right half**.
+4. Repeat the steps until the element is found or the search interval becomes empty.
+
+This approach **drastically reduces** the number of comparisons compared to checking each element one by one.
 
 ## 📈 Time and Space Complexity
 - **Time Complexity:** O(log n)  
-  Binary Search divides the search space in half with each step.
+  At each step, the algorithm cuts the search space in half.
 - **Space Complexity:** O(1)  
-  It requires a constant amount of space (unless implemented recursively).
-
----
+  Uses constant space (iterative version). Recursive implementations may use O(log n) due to the call stack.
 
 ## 💬 Additional Notes
-- ⚠️ Your data **must be sorted** for Binary Search to work correctly.  
-  If the collection is unsorted, splitting it in half won't help—you'll need to sort it first or use another method.
+- To apply the Binary Search algorithm the input collection **must be sorted**.
